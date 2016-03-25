@@ -1,0 +1,139 @@
+
+
+// color variables
+$yellow: #F3C25B;
+$teal: #83BAB2;
+$green: #8B9E74;
+$red: #c22032;
+$grey: #414042;
+$navy: #1E376C;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	background: white;
+	padding-bottom: 40px;
+
+	@include respond-to( 1220px ) {
+		padding-bottom: 20px;
+	}
+}
+
+
+// header styles
+header {
+	position: relative;
+	background: url(../img/bg-head.jpg) bottom center no-repeat;
+	background-size: cover;
+	padding-bottom: 5px;
+}
+
+
+
+.subhead {
+	background: url(../img/bg-subhead.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 4px 0 0;
+	border-bottom: 20px solid $navy;
+
+	@include respond-to( 768px ) {
+		padding: 14px 0 10px;
+		border-bottom: 30px solid $navy;
+	}
+}
+
+
+
+// wrap div
+.wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+.main-content {
+	padding: 20px;
+	font-size: 20px;
+	line-height: 28px;
+
+	h2, p {
+		padding: 10px 0;
+	}
+
+	h2 {
+		font-size: 20px;
+		line-height: 28px;
+		@include font-bold;
+		color: $red;
+	}
+
+	@include respond-to( 768px ) {
+		padding: 40px 120px;
+		font-size: 28px;
+		line-height: 40px;
+
+		h2 {
+			font-size: 28px;
+			line-height: 40px;
+		}
+
+		h2, p {
+			padding: 20px 0;
+		}
+	}
+}
+
+
+
+.button {
+	background: $red;
+	color: white;
+	padding: 20px;
+	display: inline-block;
+	border-radius: 20px;
+}
+
+
+
+.footer-bar {
+	background: url(../img/border-footer.png) center center no-repeat;
+	background-size: cover;
+	height: 45px;
+	border-top: 4px solid lighten( $grey, 40% );
+	box-shadow: 0 7px 7px rgba( $grey, .4 );
+}
+
+
+
+// footer styles
+footer {
+	color: $grey;
+	padding: 30px 20px;
+	text-align: center;
+	@include clearfix;
+}
+
+
+
+.fine-print {
+	padding: 20px 0 0;
+	font-size: .85em;
+	line-height: 1.3em;
+	text-align: right;
+}
+
