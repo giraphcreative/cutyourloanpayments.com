@@ -4,7 +4,7 @@
 $yellow: #F3C25B;
 $teal: #83BAB2;
 $green: #8B9E74;
-$red: #c22032;
+$red: #C22032;
 $grey: #414042;
 $navy: #1E376C;
 
@@ -35,25 +35,29 @@ $navy: #1E376C;
 // header styles
 header {
 	position: relative;
-	background: url(../img/bg-head.jpg) bottom center no-repeat;
+	background: url(../img/bg-header.png) bottom center no-repeat;
 	background-size: cover;
 	padding-bottom: 5px;
-}
-
-
-
-.subhead {
-	background: url(../img/bg-subhead.jpg) center center no-repeat;
-	background-size: cover;
-	padding: 4px 0 0;
-	border-bottom: 20px solid $navy;
+	padding: 10px;
 
 	@include respond-to( 768px ) {
-		padding: 14px 0 10px;
-		border-bottom: 30px solid $navy;
+		padding: 30px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 50px;
+	}
+
+	.wrap {
+		background: white;
+		padding: 10px;
+		box-shadow: 5px 5px 10px rgba( black, .1 );
+
+		@include respond-to( 1024px ) {
+			padding: 25px;
+		}
 	}
 }
-
 
 
 // wrap div
@@ -71,28 +75,34 @@ header {
 	font-size: 20px;
 	line-height: 28px;
 
-	h2, p {
-		padding: 10px 0;
-	}
-
 	h2 {
-		font-size: 20px;
-		line-height: 28px;
-		@include font-bold;
+		font-size: 25px;
+		line-height: 30px;
+		padding: 10px 0;
 		color: $red;
 	}
 
+	h3 {
+		font-size: 22px;
+		line-height: 30px;
+		padding: 10px 0;
+		@include font;
+	}
+
 	@include respond-to( 768px ) {
-		padding: 40px 120px;
+		padding: 40px 80px;
 		font-size: 28px;
 		line-height: 40px;
 
 		h2 {
-			font-size: 28px;
-			line-height: 40px;
+			font-size: 40px;
+			line-height: 45px;
+			padding: 20px 0;
 		}
 
-		h2, p {
+		h3 {
+			font-size: 35px;
+			line-height: 40px;
 			padding: 20px 0;
 		}
 	}
@@ -110,21 +120,13 @@ header {
 
 
 
-.footer-bar {
-	background: url(../img/border-footer.png) center center no-repeat;
-	background-size: cover;
-	height: 45px;
-	border-top: 4px solid lighten( $grey, 40% );
-	box-shadow: 0 7px 7px rgba( $grey, .4 );
-}
-
-
 
 // footer styles
 footer {
 	color: $grey;
 	padding: 30px 20px;
 	text-align: center;
+	border-top: 20px solid $red;
 	@include clearfix;
 }
 
@@ -132,8 +134,8 @@ footer {
 
 .fine-print {
 	padding: 20px 0 0;
-	font-size: .85em;
-	line-height: 1.3em;
-	text-align: right;
+	font-size: .8em;
+	line-height: 1.2em;
+	text-align: left;
 }
 
